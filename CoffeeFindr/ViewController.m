@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "CoreLocation/CoreLocation.h"
+#import "MapKit/MapKit.h"
 
-@interface ViewController ()
+@interface ViewController () <CLLocationManagerDelegate>
+
+@property CLLocationManager *locationManager;
 
 @end
 
@@ -16,12 +20,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.locationManager = [CLLocationManager new];
+    self.locationManager.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

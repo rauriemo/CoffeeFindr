@@ -14,6 +14,8 @@
 		3273A2B91C3B18E2004CD0D0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3273A2B81C3B18E2004CD0D0 /* Images.xcassets */; };
 		3273A2BC1C3B18E2004CD0D0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3273A2BA1C3B18E2004CD0D0 /* LaunchScreen.xib */; };
 		3273A2C81C3B18E2004CD0D0 /* CoffeeFindrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3273A2C71C3B18E2004CD0D0 /* CoffeeFindrTests.m */; };
+		3273A2D21C3B1A99004CD0D0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3273A2D11C3B1A99004CD0D0 /* CoreLocation.framework */; };
+		3273A2D41C3B1A9F004CD0D0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3273A2D31C3B1A9F004CD0D0 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		3273A2C11C3B18E2004CD0D0 /* CoffeeFindrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeFindrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3273A2C61C3B18E2004CD0D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3273A2C71C3B18E2004CD0D0 /* CoffeeFindrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoffeeFindrTests.m; sourceTree = "<group>"; };
+		3273A2D11C3B1A99004CD0D0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3273A2D31C3B1A9F004CD0D0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3273A2D41C3B1A9F004CD0D0 /* MapKit.framework in Frameworks */,
+				3273A2D21C3B1A99004CD0D0 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,8 @@
 		3273A29F1C3B18E2004CD0D0 = {
 			isa = PBXGroup;
 			children = (
+				3273A2D31C3B1A9F004CD0D0 /* MapKit.framework */,
+				3273A2D11C3B1A99004CD0D0 /* CoreLocation.framework */,
 				3273A2AA1C3B18E2004CD0D0 /* CoffeeFindr */,
 				3273A2C41C3B18E2004CD0D0 /* CoffeeFindrTests */,
 				3273A2A91C3B18E2004CD0D0 /* Products */,
