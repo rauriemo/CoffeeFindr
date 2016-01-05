@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../CoffeeFindr/CoffeePlace.h">
+   </FileRef>
+   <FileRef
+      location = "group:../CoffeeFindr/CoffeePlace.m">
+   </FileRef>
+   <FileRef
       location = "self:CoffeeFindr.xcodeproj">
    </FileRef>
 </Workspace>
