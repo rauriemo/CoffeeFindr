@@ -11,8 +11,9 @@
 #import <MapKit/MapKit.h>
 #import "CoffeePlace.h"
 
-@interface ViewController () <CLLocationManagerDelegate>
+@interface ViewController () <CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property CLLocationManager *locationManager;
 @property CLLocation *currentLocation;
 @property NSArray *coffeePlaces;
@@ -32,6 +33,10 @@
 -(void) updateCurrentLocation {
     [self.locationManager requestAlwaysAuthorization];
     [self.locationManager startUpdatingLocation];
+}
+
+-(void) populateList{
+    [self.tableView reloadData];
 }
 
 -(void)findCoffeeShops:(CLLocation *)location{
@@ -57,6 +62,8 @@
         NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"kmAway" ascending:true];
         NSArray *sortedArray = [tempArray sortedArrayUsingDescriptors:@[sortDescriptor]];
         self.coffeePlaces = [NSArray arrayWithArray:sortedArray];
+        
+        [self populateList];
 //        for (int i = 0; i<self.coffeePlaces.count; i++) {
 //            NSLog(@"%f", [self.coffeePlaces[i] kmAway]);
 //        }
@@ -68,7 +75,17 @@
     self.currentLocation = locations.firstObject;
     [self.locationManager stopUpdatingLocation];
     [self findCoffeeShops:self.currentLocation];
-    NSLog(@"%@", self.currentLocation);
+//    NSLog(@"%@", self.currentLocation);
 }
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    cell.textLabel.text = [[[self.coffeePlaces objectAtIndex:indexPath.row] mapItem] name];
+    return cell;
+};
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.coffeePlaces.count;
+};
 
 @end
