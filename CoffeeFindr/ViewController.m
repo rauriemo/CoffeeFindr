@@ -41,8 +41,9 @@
     MKLocalSearch *search = [[MKLocalSearch alloc]initWithRequest:request];
     [search startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error) {
         NSArray *mapItems = response.mapItems;
+//        NSLog(@"%lu", mapItems.count);
         NSMutableArray *tempArray = [NSMutableArray new];
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < mapItems.count; i++) {
             MKMapItem *mapItem = mapItems[i];
             CLLocationDistance metersAway = [mapItem.placemark.location distanceFromLocation:location];
             float kmAway = metersAway / 1000;
