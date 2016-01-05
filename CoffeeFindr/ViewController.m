@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DetailViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #import "CoffeePlace.h"
@@ -87,5 +88,11 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.coffeePlaces.count;
 };
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    DetailViewController *detailVC = segue.destinationViewController;
+    detailVC.coffeePlace = [self.coffeePlaces objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+    detailVC.currentLocation = self.currentLocation;
+}
 
 @end

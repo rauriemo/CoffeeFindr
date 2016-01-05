@@ -17,6 +17,7 @@
 		3273A2D21C3B1A99004CD0D0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3273A2D11C3B1A99004CD0D0 /* CoreLocation.framework */; };
 		3273A2D41C3B1A9F004CD0D0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3273A2D31C3B1A9F004CD0D0 /* MapKit.framework */; };
 		32BB1F891C3B3BA300517D01 /* CoffeePlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BB1F881C3B3BA300517D01 /* CoffeePlace.m */; };
+		32BB1F8C1C3B52E200517D01 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BB1F8B1C3B52E200517D01 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		3273A2D31C3B1A9F004CD0D0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		32BB1F871C3B3BA300517D01 /* CoffeePlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoffeePlace.h; sourceTree = "<group>"; };
 		32BB1F881C3B3BA300517D01 /* CoffeePlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoffeePlace.m; sourceTree = "<group>"; };
+		32BB1F8A1C3B52E200517D01 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = CoffeeFindr.xcodeproj/../DetailViewController.h; sourceTree = SOURCE_ROOT; };
+		32BB1F8B1C3B52E200517D01 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = CoffeeFindr.xcodeproj/../DetailViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 		3273A2AA1C3B18E2004CD0D0 /* CoffeeFindr */ = {
 			isa = PBXGroup;
 			children = (
+				32BB1F8A1C3B52E200517D01 /* DetailViewController.h */,
+				32BB1F8B1C3B52E200517D01 /* DetailViewController.m */,
 				32BB1F871C3B3BA300517D01 /* CoffeePlace.h */,
 				32BB1F881C3B3BA300517D01 /* CoffeePlace.m */,
 				3273A2AF1C3B18E2004CD0D0 /* AppDelegate.h */,
@@ -232,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32BB1F8C1C3B52E200517D01 /* DetailViewController.m in Sources */,
 				3273A2B41C3B18E2004CD0D0 /* ViewController.m in Sources */,
 				32BB1F891C3B3BA300517D01 /* CoffeePlace.m in Sources */,
 				3273A2B11C3B18E2004CD0D0 /* AppDelegate.m in Sources */,

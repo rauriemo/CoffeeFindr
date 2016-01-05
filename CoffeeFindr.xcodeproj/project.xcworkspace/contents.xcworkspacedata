@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../DetailViewController.h">
+   </FileRef>
+   <FileRef
+      location = "group:../DetailViewController.m">
+   </FileRef>
+   <FileRef
       location = "group:../CoffeeFindr/CoffeePlace.h">
    </FileRef>
    <FileRef
